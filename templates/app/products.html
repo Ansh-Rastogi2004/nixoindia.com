@@ -1,0 +1,362 @@
+{% load static %}
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nixo|Products</title>
+        <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,600;1,200&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    </head>
+
+    <body>
+
+        <div class='spinner-wrapper'>
+            <div class="spinner"></div>
+        </div>
+
+        <div class="header">
+            <div style="background-image: url({% static 'app/images/home/background.jpg' %});">
+                <div class="container">
+                    <div class= "navbar">
+                        <div class="logo">
+                            <img src="{% static 'app/images/home/nixo_icon.png' %}" width=175px;>
+                        </div>
+
+                        <nav>
+                            <ul id="menuitems">
+                                <li><a href="{% url 'home' %}">Home</a></li>
+                                <li><a href="{% url 'products' %}">Products</a></li>
+                                <li><a href="about.html">Cart</a></li>
+                                <li><a href="{% url 'login' %}">Login</a></li>
+                            </ul>
+                        </nav>
+
+                        <img src="{% static 'app/images/home/bag.png' %}" width="30px" height="30px">
+                        <img src="{% static 'app/images/home/menu(2).png' %}" class="menu-icon" width="30px"
+                             height="30px" onclick="menutoggle()">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="col-2text">
+                                <h1>Give Your Bathroom<br>A New Style!</h1>
+                                <h3><p>Premium Bath Accessories Brand catering <br>to the needs of customers since 1987.</p></h3>
+                                <a href="products.html" class="btn">Explore Now &#8594;</a>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <img src="{% static 'app/images/home/woman.png' %}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!---------- Featured Categories ---------->
+
+        <div class="categories">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="{% static 'app/images/home/featured1.jpg' %}">
+                    </div>
+
+                    <div class="col-3">
+                        <img src="{% static 'app/images/home/featured 2.jpg' %}">
+                    </div>
+
+                    <div class="col-3">
+                        <img src="{% static 'app/images/home/featured 3.jpg' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!---------- Featured Products ---------->
+
+        <div class="small-container">
+            <h2 class="title">Featured Products</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="{% static 'app/images/home/item 9.jpg' %}">
+                    <h4>Towel Rack</h4>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>₹ 300</p>
+                </div>
+                <div class="col-4">
+                    <img src="{% static 'app/images/home/item 10.jpg' %}">
+                    <h4>Towel Stand</h4>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>₹ 350</p>
+                </div>
+                <div class="col-4">
+                    <img src="{% static 'app/images/home/item 11.jpg' %}">
+                    <h4>Towel</h4>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>₹ 400</p>
+                </div>
+                <div class="col-4">
+                    <img src="{% static 'app/images/home/item 12.jpeg' %}">
+                    <h4>yes</h4>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>₹ 500</p>
+                </div>
+            </div>
+        </div>
+
+<!---------- Hot Selling ---------->
+
+        <div class="small-container">
+            <h2 class="title">Hot Selling Products</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="{% static 'app/images/home/item 1.jpg' %}">
+                    <h4>Towel Rack</h4>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>₹ 300</p>
+                </div>
+                <div class="col-4">
+                    <img src="{% static 'app/images/home/item 2.jpg' %}">
+                    <h4>Towel Stand</h4>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>₹ 350</p>
+                </div>
+                <div class="col-4">
+                    <img src="{% static 'app/images/home/item 3.jpeg' %}">
+                    <h4>Towel</h4>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>₹ 400</p>
+                </div>
+                <div class="col-4">
+                    <img src="{% static 'app/images/home/item 4.jpg' %}">
+                    <h4>yes</h4>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>₹ 500</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="{% static 'app/images/home/item 5.jpg' %}">
+                    <h4>Towel Rack</h4>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>₹ 300</p>
+                </div>
+                <div class="col-4">
+                    <img src="{% static 'app/images/home/item 6.jpg' %}">
+                    <h4>Towel Stand</h4>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>₹ 350</p>
+                </div>
+                <div class="col-4">
+                    <img src="{% static 'app/images/home/item 7.jpg' %}">
+                    <h4>Towel</h4>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>₹ 400</p>
+                </div>
+                <div class="col-4">
+                    <img src="{% static 'app/images/home/item 8.jpg' %}">
+                    <h4>yes</h4>
+                    <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>₹ 500</p>
+                </div>
+            </div>
+        </div>
+
+<!---------- Exclusively Available Products ---------->
+
+        <div class="offer">
+            <div class="small-container">
+                <div class="row">
+                        <img src="{% static 'app/images/home/exclusive img.jpg' %}" width="300" height="300" style="padding-left: 0px">
+                    <div class="col-2">
+                        <h2><p style="color: #708090">Exclusively Available Products</p></h2>
+                        <br>
+                        <h1 style="color: black">Recta Towel Rack</h1>
+                        <small style="color: #808080">Finest Bathroom Accessories manufactured in Brass and <br> Stainless Steel 304 for High Quality and Durability layered with High Micron Chrome Plating and Highly Durable PVD Coating.</small>
+                        <br>
+                        <a href="" class="btn2">Buy Now &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!---------- Testimonial ---------->
+
+        <div class="testimonial">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                        <p> Loved the products! <br> The durability is very commendable.</p>
+                        <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        <img src="{% static 'app/images/home/review 1.jpg' %}">
+                        <h3>Sean Parker</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                        <p>Full Money Value! <br> Premium Products for a <br> very reasonable price.</p>
+                        <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        </div>
+                        <img src="{% static 'app/images/home/review 2.jpg' %}">
+                        <h3>Ben Hover</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+                        <p> Nice Product!<br> sample text <br> sample text </p>
+                        <div class="ratings">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <img src="{% static 'app/images/home/review 3.jpg' %}">
+                        <h3>John Arthur</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!---------- Footer ---------->
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li>Email: nixoindia@rediffmail.com</li>
+                            <li>Phone: 9810258290</li>
+                            <li>Address: Rustagi Industries<br>Sahibabad Industrial Area</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="{% static 'app/images/home/nixo_icon.png' %}">
+                        <p>Our goal is to provide our Customers with Premium, <br>Made in India products at an affordable price.</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li><a href="https://google.com" style="color: #8a8a8a">Facebook</a></li>
+                            <li>WhatsApp</li>
+                            <li>Twitter</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright 2020 - Rustagi Industries ©</p>
+            </div>
+        </div>
+
+        <script>
+            let spinnerWrapper = document.querySelector('.spinner-wrapper');
+
+            window.addEventListener('load', function () {
+            spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+            });
+        </script>
+
+        <script>
+            var menuitems = document.getElementById("menuitems");
+            menuitems.style.maxHeight = "0px";
+            function menutoggle(){
+                if(menuitems.style.maxHeight == "0px")
+                {
+                    menuitems.style.maxHeight = "200px";
+                }
+                else{
+                    menuitems.style.maxHeight = "0px";
+                }
+            }
+        </script>
+
+    </body>
+
+</html>
